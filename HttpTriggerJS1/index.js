@@ -13,7 +13,7 @@ module.exports = function (context, req) {
         context.bindings.outputBlob = "Name passed to the function for blob: " + 
             (req.query.name || req.body.name);   
 
-       context.log(process.env["reploid"])
+       context.log("Reploid: " + process.env["reploid"])
     }
     else {
         context.res = {
