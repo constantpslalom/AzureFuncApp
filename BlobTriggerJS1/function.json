@@ -1,0 +1,19 @@
+{
+  "bindings": [
+    {
+      "name": "myBlob",
+      "type": "blobTrigger",
+      "direction": "in",
+      "path": "containerzero/{name}",
+      "connection": "storagezero_STORAGE"
+    },
+    {
+      "type": "blob",
+      "name": "outputBlob",
+      "path": "containerzero/{outputFileName}/{rand-guid}",
+      "connection": "storagezero_STORAGE",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}

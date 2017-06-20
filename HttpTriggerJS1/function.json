@@ -1,0 +1,30 @@
+{
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "type": "queue",
+      "name": "outQueueItem",
+      "queueName": "outqueue",
+      "connection": "storagezero_STORAGE",
+      "direction": "out"
+    },
+    {
+      "type": "blob",
+      "name": "outputBlob",
+      "path": "containerzero/{rand-guid}",
+      "connection": "storagezero_STORAGE",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}
